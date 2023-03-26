@@ -3,7 +3,7 @@ name: build APK
 on:
   push:
     branches:
-      - mmain
+      - master
 
 # 4
 jobs:
