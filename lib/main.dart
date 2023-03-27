@@ -141,29 +141,14 @@ class _HomePageState extends State<HomePage> {
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
                 child: ClipPath(
-                  clipper: _CustomClipper3(),
-                  child: Container(
-                      color: Colors.amber,
-                      child: Image.asset(
-                        "assets/images/shoes.png",
-                        fit: BoxFit.cover,
-                      )),
-                ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                child: ClipPath(
-                  clipper: _CustomClipper2(),
-                  child: SizedBox(
-                    child: Image.asset(
-                      "assets/images/images.jpeg",
-                      fit: BoxFit.cover,
-                      width: 100,
-                      height: 40,
-                    ),
-                  ),
-                ),
+                    clipper: _CustomClipper3(),
+                    child: SizedBox(
+                        height: 50,
+                        width: 100,
+                        child: Image.asset(
+                          "assets/images/shoes.png",
+                          fit: BoxFit.fill,
+                        ))),
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -288,6 +273,55 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.redAccent,
                     ),
                   ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.82,
+                    left: MediaQuery.of(context).size.width - 100),
+                child: Material(
+                  color: Colors.black,
+                  clipBehavior: Clip.antiAlias,
+                  shape: const BeveledRectangleBorder(
+                      // side: BorderSide(color: Colors.blue), if you need
+                      borderRadius:
+                          BorderRadius.only(topLeft: Radius.circular(20.0))),
+                  child: Container(
+                    height: 50,
+                    width: 100,
+                    decoration: const BoxDecoration(
+                      color: Colors.red,
+                      // borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    child: Image.asset(
+                      "assets/images/shoes.png",
+                      fit: BoxFit.fitWidth,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.82),
+                child: Material(
+                  color: Colors.black,
+                  clipBehavior: Clip.antiAlias,
+                  shape: const BeveledRectangleBorder(
+                      // side: BorderSide(color: Colors.blue), if you need
+                      borderRadius:
+                          BorderRadius.only(topRight: Radius.circular(20.0))),
+                  child: Container(
+                    height: 50,
+                    width: 100,
+                    decoration: const BoxDecoration(
+                      color: Colors.red,
+                      // borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    child: Image.asset(
+                      "assets/images/baby.png",
+                      fit: BoxFit.fitWidth,
+                    ),
+                  ),
                 ),
               )
             ],
