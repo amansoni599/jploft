@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-       debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Padding(
                           padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * 0.03),
+                              top: MediaQuery.of(context).size.height * 0.02),
                           child: SizedBox(
                               height: 100,
                               width: 200,
@@ -102,8 +102,7 @@ class _HomePageState extends State<HomePage> {
                                   color: Colors.white)),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * 0.03),
+                          padding: EdgeInsets.only(top: 0),
                           child: const Text("12:34",
                               style: TextStyle(
                                   fontSize: 24.0,
